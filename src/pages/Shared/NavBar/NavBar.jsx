@@ -5,9 +5,9 @@ const NavBar = () => {
 
 
     const navOptions = <>
-        <li><Link to={'#'}>Home</Link></li>
-        <li><Link to={'#'}>About</Link></li>
-        <li><Link to={'#'}>Blog</Link></li>
+        <li><Link to={'/'}>Home</Link></li>
+        <li><Link to={'/menu'}>Our Menu</Link></li>
+        <li><Link to={'/order/Salad'}>Order Food</Link></li>
     </>
 
   return (
