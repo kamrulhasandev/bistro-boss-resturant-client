@@ -1,5 +1,5 @@
 // @ts-nocheck
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import orderCover from "../../../assets/shop/banner2.jpg";
 import Cover from "../../Shared/Cover/Cover";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
@@ -8,6 +8,7 @@ import useMenu from "../../../hooks/useMenu";
 import OrderTab from "../OrderTab/OrderTab";
 import { useParams } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
+import AuthProvider from "../../../providers/AuthProvider";
 
 const Order = () => {
   const categories = ['Salad', 'Pizza', 'Soups', 'Dessert', 'Drinks' ]
@@ -20,7 +21,6 @@ const Order = () => {
   const salad = menu.filter((item) => item.category === "salad");
   const pizza = menu.filter((item) => item.category === "pizza");
   const drinks = menu.filter((item) => item.category === "drinks");
-  console.log(category);
   return (
     <div>
       <Helmet>
